@@ -490,7 +490,7 @@ def arg_parse():
                         lr=0.001,
                         clip=2.0,
                         batch_size=20,
-                        num_epochs=2,
+                        num_epochs=1000,
                         train_ratio=0.8,
                         test_ratio=0.1,
                         num_workers=1,
