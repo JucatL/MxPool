@@ -506,7 +506,7 @@ def arg_parse():
                         num_pool=1,
                         bmname='ENZYMES',
                         num_aspect=3,
-                        multi_conv=0,
+                        multi_conv=1,
                         multi_pool=1,
                         merge_method='sum',
                        )
