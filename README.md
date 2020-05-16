@@ -20,7 +20,7 @@ If you have installed them, you will get their version. Otherwise, please instal
 
 A few additional packages are needed, including pytorch, matplotlib, networkx, scikit-learn, tensorboardx, community. Suppose you have installed Anaconda, you can create a virtual envrionment by command:
 
-$ conda activate -n your_env_name
+$ conda create -n your_env_name
 
 and activate your envrienment by command:
 
@@ -56,13 +56,13 @@ $ sh example.sh
 
 We have provided a few scripts in example.sh. For example:
 
-python -m train --bmname=ENZYMES --method=MxPool --assign-ratio 0.3 0.3 0.3 --hidden-dim 20 40 60 --output-dim 20 40 60 --cuda=0 --num-classes=6 --num-aspect=3 --multi-conv=1 --multi-pool=1 --lr=0.001
+python -m train --bmname=ENZYMES --method=MxPool --assign-ratio 0.15 0.15 0.15 --hidden-dim 30 50 80 --output-dim 30 50 80 --cuda=0 --num-classes=6 --num-aspect=3 --multi-conv=1 --multi-pool=1 --lr=0.001
 
-This script run MxPool with 3 conv networks and 3 pooling networks. Each conv network sets hidden dimension as 20, 40, or 60. Each pool network sets comression ratio as 0.3. The descriptions of other parameters are listed as follows:
+This script run MxPool with 3 conv networks and 3 pooling networks. Each conv network sets hidden dimension as 30, 50, or 80. Each pool network sets comression ratio as 0.15. The descriptions of other parameters are listed as follows:
 
 --bmname: Name of the benchmark dataset
 
---method: Method. Possible values: GraphSage, diffpool, MxPool
+--method: Method. Possible values: base, diffpool, MxPool
 
 --assign-ratio: Compression ratio in pooling, multiple numbers should be specified if Multiplex pooling is used
 
@@ -83,5 +83,7 @@ This script run MxPool with 3 conv networks and 3 pooling networks. Each conv ne
 Note that multi_conv and multi_pool cannot be set to 0 at the same time.
 
 --lr:Learning rate.
+
+--merge-method:cat or sum. two different method on get embedding tensor and assignment tensor.You can get detailed implementation method in mxPoolCAT or mxPoolSUM.
 
 Other unmentioned hyperparametric information can be found in the code .
