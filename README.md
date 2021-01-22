@@ -4,8 +4,6 @@ Graphs are known to have complicated structures and have myriad applications. Ho
 
 MxPool concurrently uses multiple graph convolution networks and graph pooling networks to build hierarchical learning structure for graph representation learning tasks. Our experiments have shown that MxPool has marked superiority over other state-of-the-art graph representation learning methods.
 
-MxPool is implemented based on DiffPool (https://github.com/RexYing/diffpool). 
-
 # Quick Start
 
 Package Installation
